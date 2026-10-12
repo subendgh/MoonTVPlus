@@ -2,7 +2,9 @@ name: Deploy to Cloudflare
 
 on:
   workflow_dispatch:
-
+  push:
+    branches:
+      - old-version-branch2
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
